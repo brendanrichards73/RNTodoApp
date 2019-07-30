@@ -1,62 +1,57 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 
-
-
 const styles = StyleSheet.create ({
-    container: {
+    buttonContainer: {
         flex: 1,
         flexDirection: 'column',
-    },
-    home: {
-       justifyContent: 'center',
+        justifyContent: 'space-between',
+        alignItems: 'center',
     },
     button: {
-        justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 20,
+        borderRadius: 20,
         borderWidth: 5,
         width: 100,
         height: 100,
         padding: 10,
         margin: 10,
-        borderColor: '#4863A0',
+        color: 'white',
+        borderColor: '#f4511e',
         backgroundColor: '#82CAFF'
     },
-    
-    
   })
   
-
-
 export default class Home extends Component {
     static navigationOptions  = {
-        title: 'Home'
+        title: 'Home',
+        headerStyle: {
+            backgroundColor: '#f4511e',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        },
     }
 
-    
     render() {
         return (
-            <View styles = { styles.container}>
-               
-                <Text styles = {styles.home}>
+            <View>
+                <Text>
                 Home Screen
                 </Text>
+                <View styles = {styles.buttonContainer}>
                     <TouchableOpacity>
                         <Text style = {styles.button}
                         title='Go to the API Fetch Screen' 
                         onPress={()=>this.props.navigation.navigate('Main')}>
-                        API
-                        Screen
+                        API Screen
                         </Text>
                     </TouchableOpacity>
-
                     <TouchableOpacity>
                         <Text style = {styles.button}
                         title='Go to the ToDo Screen' 
                         onPress={()=>this.props.navigation.navigate('ToDo')}>
-                        ToDo
-                        Screen
+                        ToDo Screen
                         </Text>
                     </TouchableOpacity>
 
@@ -64,10 +59,10 @@ export default class Home extends Component {
                         <Text style = {styles.button}
                         title='Go to the Images Screen' 
                         onPress={()=>this.props.navigation.navigate('Images')}>
-                        Images
-                        Screen
+                        Images Screen
                         </Text>
                     </TouchableOpacity>
+                </View>
             </View>
         );    
         }

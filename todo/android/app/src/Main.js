@@ -3,9 +3,15 @@ import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-nativ
 
 export default class Main extends Component {
     static navigationOptions = {
-        title: 'API'
+        title: 'API',
+        headerStyle: {
+            backgroundColor: '#f4511e',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        },
     }
-
 
     render() {
         return (

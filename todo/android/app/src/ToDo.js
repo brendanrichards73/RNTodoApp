@@ -3,9 +3,15 @@ import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-nativ
 
 export default class ToDo extends Component {
     static navigationOptions = {
-        title: 'ToDo'
+        title: 'ToDo',
+        headerStyle: {
+            backgroundColor: '#f4511e',
+        },
+        headerTintColor: 'white',
+        headerTitleStyle: {
+            fontWeight: 'bold',
+        },
     }
-
 
     render() {
         return (

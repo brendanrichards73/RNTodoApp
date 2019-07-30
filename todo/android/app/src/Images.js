@@ -6,7 +6,6 @@ export default class Images extends Component {
         title: 'Images'
     }
 
-
     render() {
         return (
             <View>
