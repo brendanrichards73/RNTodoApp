@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const styles = StyleSheet.create ({
     buttonContainer: {
         flex: 1,
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     button: {
-        borderRadius: 20,
-        borderWidth: 5,
+       
         width: 100,
         height: 100,
         padding: 10,
@@ -43,7 +42,7 @@ export default class Home extends Component {
                     <TouchableOpacity>
                         <Text style = {styles.button}
                         title='Go to the API Fetch Screen' 
-                        onPress={()=>this.props.navigation.navigate('Main')}>
+                        onPress={()=>this.props.navigation.navigate('API')}>
                         API Screen
                         </Text>
                     </TouchableOpacity>
@@ -65,7 +64,7 @@ export default class Home extends Component {
                 </View>
             </View>
         );    
-        }
     }
+}
 
    
