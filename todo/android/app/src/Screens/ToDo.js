@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import TodoApp from '../TodoApp/TodoApp';
+import store from '../TodoApp/store/index';
+import { Provider } from 'react-redux';
 
 export default class ToDo extends Component {
     static navigationOptions = {
@@ -15,9 +18,9 @@ export default class ToDo extends Component {
 
     render() {
         return (
-            <View>
-                <Text>ToDo Screen</Text>
-            </View>
+            <Provider store={store}>
+                <TodoApp />
+            </Provider>
         )    
     }
 
