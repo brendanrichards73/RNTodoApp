@@ -3,6 +3,17 @@ import { FlatList, StyleSheet, Text, View, ActivityIndicator } from 'react-nativ
 
 
 export default class API extends React.Component {
+  
+  static navigationOptions  = {
+    title: 'API',
+    headerStyle: {
+        backgroundColor: '#f4511e',
+    },
+    headerTintColor: 'white',
+    headerTitleStyle: {
+        fontWeight: 'bold',
+    },
+}
 
     constructor(props){
       super(props);
