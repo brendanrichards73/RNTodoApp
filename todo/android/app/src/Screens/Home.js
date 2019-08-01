@@ -7,12 +7,14 @@ const styles = StyleSheet.create ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
     button: {
         width: 100,
         height: 100,
         padding: 10,
         margin: 10,
+        alignItems: 'center',
         color: 'white',
         borderColor: '#f4511e',
         backgroundColor: '#82CAFF'
@@ -33,11 +35,9 @@ export default class Home extends Component {
 
     render() {
         return (
-            <View>
-                <Text>
-                Home Screen
-                </Text>
-                <View styles = {styles.buttonContainer}>
+            <View style = {styles.buttonContainer}>
+    
+                <View>
                     <TouchableOpacity>
                         <Text style = {styles.button}
                         title='Go to the API Fetch Screen' 
@@ -45,6 +45,7 @@ export default class Home extends Component {
                         API Screen
                         </Text>
                     </TouchableOpacity>
+                
                     <TouchableOpacity>
                         <Text style = {styles.button}
                         title='Go to the ToDo Screen' 
