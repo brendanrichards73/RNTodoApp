@@ -8,6 +8,7 @@ const styles = StyleSheet.create ({
         justifyContent: 'center',
         alignItems: 'center',
         
+        
     },
     button: {
         width: 100,
@@ -15,8 +16,10 @@ const styles = StyleSheet.create ({
         padding: 10,
         margin: 10,
         alignItems: 'center',
+        justifyContent: 'center',
         color: 'white',
         borderColor: '#f4511e',
+        borderWidth: 2,
         backgroundColor: '#82CAFF'
     },
   })
