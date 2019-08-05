@@ -40,6 +40,8 @@ componentDidMount(){
 
 
 
+
+
 render(){
 
   if(this.state.isLoading){
@@ -49,6 +51,10 @@ render(){
       </View>
     )
   }
+
+  let serviceItems = this.state.dataSource.map( (item, i) => {
+    return <Picker.Item key={i} value={item.name} label={item.name} />
+  });
 
   return(
     <View style={{flex: 1, paddingTop:20}}>
@@ -63,10 +69,7 @@ render(){
             onValueChange={(itemValue, itemIndex) =>
               this.setState({language: itemValue})
             }>
-          <Picker.Item label="Great Britain" value="great britain" />
-          <Picker.Item label="America" value="america" />
-          <Picker.Item label="France" value="france" />
-          <Picker.Item label="India" value="india" />
+          {serviceItems}
         </Picker>
       </View>
       <View>
@@ -75,7 +78,7 @@ render(){
       </View>
       <View style={{marginTop: 10, borderColor: '#aeaeae',  borderWidth: 5, width: 300, height: 200}}>
         <Text>
-          Country Name:
+          Country Name
         </Text>
       <View>
         <Text>
