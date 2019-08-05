@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, Text, View, ActivityIndicator, Image } from 'react-native';
+import { FlatList, Text, View, ActivityIndicator, Image, Picker } from 'react-native';
 
 
 export default class API extends React.Component {
@@ -52,10 +52,23 @@ render(){
 
   return(
     <View style={{flex: 1, paddingTop:20}}>
-      <View style={{fontWeight: 'bold', fontSize: 20, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>
-        REST Countries API
+      <View style={{fontWeight: 'bold', justifyContent: 'center', alignItems: 'center'}}>
+        <Text style={{fontSize: 20}}>
+        Select a country to view
         </Text>
+      <View>
+        <Picker
+            selectedValue={this.state.language}
+            style={{height: 50, width: 300}}
+            onValueChange={(itemValue, itemIndex) =>
+              this.setState({language: itemValue})
+            }>
+          <Picker.Item label="Great Britain" value="great britain" />
+          <Picker.Item label="America" value="america" />
+          <Picker.Item label="France" value="france" />
+          <Picker.Item label="India" value="india" />
+        </Picker>
+      </View>
       <View>
         <Image style={{borderColor: '#aeaeae',  borderWidth: 5, width: 300, height: 200}}>
         </Image>
