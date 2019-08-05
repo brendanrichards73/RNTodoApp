@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { Platform, StyleSheet, View, TextInput, } from 'react-native';
 
 export default class Images extends Component {
     static navigationOptions  = {
@@ -16,7 +16,11 @@ export default class Images extends Component {
     render() {
         return (
             <View>
-                <Text>Images Screen</Text>
+                <TextInput
+                   placeholder='Search for a Country'
+                   style={{borderWidth: 10, borderColor: '#f2f2e1',
+                   backgroundColor: '#eaeaea', height: 50, flex: 1, padding: 5, marginTop: 20}}
+                   />
             </View>
         )    
     }

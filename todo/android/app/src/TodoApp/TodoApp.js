@@ -4,6 +4,7 @@ import AddTodo from '../TodoApp/containers/AddTodo';
 import VisibleTodos from './containers/VisibleTodos';
 
 
+
 class TodoApp extends Component {
     render () {
         return (
@@ -13,6 +14,7 @@ class TodoApp extends Component {
                 <View>
                     <VisibleTodos />
                 </View>
+                
             </View>
         )
     }
