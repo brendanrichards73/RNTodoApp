@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FlatList, Text, View, ActivityIndicator, Image, Picker } from 'react-native';
 
-
 export default class API extends React.Component {
   
   static navigationOptions  = {
@@ -17,7 +16,18 @@ export default class API extends React.Component {
 
 constructor(props){
   super(props);
-  this.state ={ isLoading: true}
+  this.state ={ 
+    isLoading: true,
+    country:'',
+    region: '',
+    subregion: '',
+    capital: '',
+    population: '',
+    area: '',
+    flag: '',
+
+
+  }
 }
 
 componentDidMount(){
@@ -38,10 +48,6 @@ componentDidMount(){
     });
 }
 
-
-
-
-
 render(){
 
   if(this.state.isLoading){
@@ -55,6 +61,7 @@ render(){
   let serviceItems = this.state.dataSource.map( (item, i) => {
     return <Picker.Item key={i} value={item.name} label={item.name} />
   });
+ 
 
   return(
     <View style={{flex: 1, paddingTop:20}}>
@@ -64,10 +71,19 @@ render(){
         </Text>
       <View>
         <Picker
-            selectedValue={this.state.language}
+            selectedValue={this.state.country}
             style={{height: 50, width: 300}}
-            onValueChange={(itemValue, itemIndex) =>
-              this.setState({language: itemValue})
+            onValueChange={(itemValue, itemIndex) => {
+              this.setState({country: itemValue});
+              const associatedData = this.state.dataSource.filter(item => itemValue === item.name);
+              this.setState({region: associatedData[0].region});
+              this.setState({subregion: associatedData[0].subregion});
+              this.setState({area: associatedData[0].area});
+              this.setState({capital: associatedData[0].capital});
+              this.setState({population: associatedData[0].population});
+              this.setState({flag: associatedData[0].flag});
+
+              }
             }>
           {serviceItems}
         </Picker>
@@ -78,37 +94,41 @@ render(){
       </View>
       <View style={{marginTop: 10, borderColor: '#aeaeae',  borderWidth: 5, width: 300, height: 200}}>
         <Text>
-          Country Name
+         Country Name: {this.state.country}
         </Text>
       <View>
         <Text>
-          Region:
-        </Text>
-      </View>
-      <View>
-        <Text>
-          Currency:
+          Region:{this.state.region}
         </Text>
       </View>
       <View>
         <Text>
-          TimeZones:
+        Subregion:{this.state.subregion}
         </Text>
       </View>
       <View>
         <Text>
-          National flag image:
+          Land Area: {this.state.area}
+        </Text>
+      </View>
+      <View>
+        <Text>
+          Capital City: {this.state.capital}
+        </Text>
+      </View> 
+      <View>
+        <Text>
+          Population: {this.state.population}
+        </Text>
+      </View>
+      <View>
+        <Text>
+          Flag: {this.state.flag}
         </Text>
       </View>
       </View>
       </View>
-      <View>
-      <FlatList
-        data={this.state.dataSource}
-        renderItem={({item}) => <Text>{item.name}, {item.region}, {item.population}, {item.currencies.name}, {item.timezones}, {item.flag}</Text>}
-        keyExtractor={({id}, index) => id}
-      />
-      </View>
+      
     </View>
   );
 }
