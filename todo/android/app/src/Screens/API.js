@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatList, Text, View, ActivityIndicator, Image, Picker } from 'react-native';
+import { Text, View, ActivityIndicator, Image, Picker, StyleSheet, CardImg } from 'react-native';
 
 export default class API extends React.Component {
   
@@ -24,7 +24,7 @@ constructor(props){
     capital: '',
     population: '',
     area: '',
-    flag: '',
+    image: '',
 
 
   }
@@ -81,51 +81,51 @@ render(){
               this.setState({area: associatedData[0].area});
               this.setState({capital: associatedData[0].capital});
               this.setState({population: associatedData[0].population});
-              this.setState({flag: associatedData[0].flag});
+              this.setState({image: associatedData[0].flag});
 
               }
             }>
           {serviceItems}
         </Picker>
       </View>
-      <View>
-        <Image style={{borderColor: '#aeaeae',  borderWidth: 5, width: 300, height: 200}}>
+      <View style={{borderColor: '#aeaeae',  borderWidth: 5, width: 400, height: 200}}>
+        <Image>
         </Image>
       </View>
-      <View style={{marginTop: 10, borderColor: '#aeaeae',  borderWidth: 5, width: 300, height: 200}}>
-        <Text>
+      <View style={styles.dataContainer}>
+        <Text style={styles.text}>
          Country Name: {this.state.country}
         </Text>
       <View>
-        <Text>
+        <Text style={styles.text}>
           Region:{this.state.region}
         </Text>
       </View>
       <View>
-        <Text>
+        <Text style={styles.text}>
         Subregion:{this.state.subregion}
         </Text>
       </View>
       <View>
-        <Text>
+        <Text style={styles.text}>
           Land Area: {this.state.area}
         </Text>
       </View>
       <View>
-        <Text>
+        <Text style={styles.text}>
           Capital City: {this.state.capital}
         </Text>
       </View> 
       <View>
-        <Text>
+        <Text style={styles.text}>
           Population: {this.state.population}
         </Text>
       </View>
-      <View>
-        <Text>
-          Flag: {this.state.flag}
-        </Text>
-      </View>
+      {/* <View>
+        <CardImg top width='100%' src={this.state.image}>
+           
+        </CardImg>
+      </View> */}
       </View>
       </View>
       
@@ -133,3 +133,18 @@ render(){
   );
 }
 }
+
+const styles = StyleSheet.create({
+  dataContainer: {
+    marginTop: 10, 
+    borderColor: '#aeaeae',  
+    borderWidth: 5, 
+    width: 400, 
+    height: 300
+  },
+  text: {
+    fontSize: 20,
+    padding: 10
+
+  }
+})
