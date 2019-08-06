@@ -94,31 +94,31 @@ render(){
       </View>
       <View style={styles.dataContainer}>
         <Text style={styles.text}>
-         Country Name: {this.state.country}
+         Country Name:{'    '}{this.state.country}
         </Text>
       <View>
         <Text style={styles.text}>
-          Region:{this.state.region}
-        </Text>
-      </View>
-      <View>
-        <Text style={styles.text}>
-        Subregion:{this.state.subregion}
+          Region:{'    '}{this.state.region}
         </Text>
       </View>
       <View>
         <Text style={styles.text}>
-          Land Area: {this.state.area}
+        Subregion:{'    '}{this.state.subregion}
         </Text>
       </View>
       <View>
         <Text style={styles.text}>
-          Capital City: {this.state.capital}
+          Land Area:{'    '}{this.state.area}
+        </Text>
+      </View>
+      <View>
+        <Text style={styles.text}>
+          Capital City: {'    '}{this.state.capital}
         </Text>
       </View> 
       <View>
         <Text style={styles.text}>
-          Population: {this.state.population}
+          Population:{'    '}{this.state.population}
         </Text>
       </View>
       {/* <View>
