@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, ActivityIndicator, Image, Picker, StyleSheet, CardImg } from 'react-native';
+import { Text, View, ActivityIndicator, Image, Picker, StyleSheet, } from 'react-native';
+import SvgUri from 'react-native-svg-uri';
 
 export default class API extends React.Component {
   
@@ -24,9 +25,7 @@ constructor(props){
     capital: '',
     population: '',
     area: '',
-    image: '',
-
-
+    image: ''
   }
 }
 
@@ -88,10 +87,15 @@ render(){
           {serviceItems}
         </Picker>
       </View>
-      <View style={{borderColor: '#aeaeae',  borderWidth: 5, width: 400, height: 200}}>
-        <Image>
-        </Image>
+        <View style={{borderColor: '#aeaeae',  borderWidth: 5, width: 400, height: 300}}>
+              <SvgUri
+                  width="400"
+                  height="300"
+                  // source={{uri: this.state.image}}
+                  source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}  
+              />
       </View>
+
       <View style={styles.dataContainer}>
         <Text style={styles.text}>
          Country Name:{'    '}{this.state.country}
