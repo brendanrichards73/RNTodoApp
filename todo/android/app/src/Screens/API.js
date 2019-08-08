@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, ActivityIndicator, Image, Picker, StyleSheet, } from 'react-native';
-import SvgUri from 'react-native-svg-uri';
+import { Text, View, ActivityIndicator, Picker, StyleSheet, Image } from 'react-native';
+
 
 export default class API extends React.Component {
   
@@ -87,14 +87,14 @@ render(){
           {serviceItems}
         </Picker>
       </View>
+        
         <View style={{borderColor: '#aeaeae',  borderWidth: 5, width: 400, height: 300}}>
-              <SvgUri
-                  width="400"
-                  height="300"
-                  // source={{uri: this.state.image}}
-                  source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}  
+              <Image
+                source={{ uri: 'https://www.countryflags.io/co/flat/64.png' }}
+                  style={{ width: 400, height: 300 }}
               />
       </View>
+      
 
       <View style={styles.dataContainer}>
         <Text style={styles.text}>
@@ -148,7 +148,8 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    padding: 10
+    padding: 10,
+    
 
   }
 })

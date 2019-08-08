@@ -116,10 +116,21 @@ android {
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
+
+    
+    signingConfigs {
+        release {
+                storeFile file('brendanapp.keystore')
+                storePassword "android"
+                keyAlias "RNTodoKey"
+                keyPassword "android"
+            }
+        }
     buildTypes {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
@@ -135,9 +146,10 @@ android {
             }
         }
     }
-}
+
 
 dependencies {
+    implementation project(':react-native-webview')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -145,6 +157,8 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation project(':react-native-svg')
 }
+    }
+
 
 // Run this once to be able to run the application with BUCK
 // puts all compile dependencies into folder libs for BUCK to use
