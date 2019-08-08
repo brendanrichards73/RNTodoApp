@@ -1,23 +1,11 @@
-version: 2
+version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/<language>:<version TAG>
+      - image: alpine:3.7
     steps:
-      - checkout
-      - run: <command>
-  test:
-    docker:
-      - image: circleci/<language>:<version TAG>
-    steps:
-      - checkout
-      - run: npm install
-      - run: cd todo && react-native run-android
-      - store_artifacts:
-          path: android/app/build/outputs/apk/release/app-release.apk
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-      - test
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
