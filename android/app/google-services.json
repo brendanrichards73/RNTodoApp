@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "163437483936",
+    "firebase_url": "https://brendantodoapp.firebaseio.com",
+    "project_id": "brendantodoapp",
+    "storage_bucket": "brendantodoapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163437483936:android:1dc229a2f4399c41",
+        "android_client_info": {
+          "package_name": "com.todo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "163437483936-d5ir9nqlnnckkscv6n88udsaulke00en.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.todo",
+            "certificate_hash": "4173c1fdab50877d9f52d1a6988173350ae309c8"
+          }
+        },
+        {
+          "client_id": "163437483936-b9tpb0ot61erpn0tsud44bl8tcadai85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVRgTYjCd4PgBovuCVgmWcBKbq-LX0Xpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "163437483936-b9tpb0ot61erpn0tsud44bl8tcadai85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
