@@ -62,6 +62,7 @@ const styles = StyleSheet.create ({
 // firebase.notifications().displayNotification(notification);
 
 
+
 export default class Home extends Component {
     static navigationOptions  = {
         title: 'Home',

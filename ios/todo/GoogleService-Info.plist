@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>163437483936-s6pvldgmr093s5u17dekefcmqudhc8l9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.163437483936-s6pvldgmr093s5u17dekefcmqudhc8l9</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>163437483936-d5ir9nqlnnckkscv6n88udsaulke00en.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABHhfN2uRZRjd8ggmyT9oK_EmH8Z7S8mQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>163437483936</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.todo</string>
+	<key>PROJECT_ID</key>
+	<string>brendantodoapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>brendantodoapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:163437483936:ios:1dc229a2f4399c41</string>
+	<key>DATABASE_URL</key>
+	<string>https://brendantodoapp.firebaseio.com</string>
+</dict>
+</plist>
