@@ -5,9 +5,10 @@
  import API from './src/Screens/API';
  import Home from './src/Screens/Home';
  import ToDo from './src/Screens/ToDo';
- import Images from './src/Screens/Images';
+ import Maps from './src/Screens/Maps';
  
 
+ 
  const Navigation = createStackNavigator({
    Home: {
      screen: Home,
@@ -15,11 +16,13 @@
    API: {
      screen: API,
    },
-   ToDo: {
+ 
+  Maps: {
+    screen: Maps,
+  },  
+  
+  ToDo: {
     screen: ToDo,
-  },
-  Images: {
-    screen: Images,
   },
   
  })
