@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1565966393922" clover="3.2.0">
-  <project timestamp="1565966393922" name="All files">
-    <metrics statements="210" coveredstatements="15" conditionals="335" coveredconditionals="5" methods="100" coveredmethods="3" elements="645" coveredelements="23" complexity="0" loc="210" ncloc="210" packages="10" files="28" classes="28"/>
+<coverage generated="1565970494789" clover="3.2.0">
+  <project timestamp="1565970494789" name="All files">
+    <metrics statements="205" coveredstatements="20" conditionals="335" coveredconditionals="6" methods="99" coveredmethods="5" elements="639" coveredelements="31" complexity="0" loc="205" ncloc="205" packages="10" files="27" classes="27"/>
     <package name="RNTodoApp">
       <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.js" path="/Users/brendanrichards/Documents/RNTodo/RNTodoApp/App.js">
@@ -240,22 +240,14 @@
       </file>
     </package>
     <package name="RNTodoApp.src.TodoApp.components">
-      <metrics statements="10" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="TodoList._test.js" path="/Users/brendanrichards/Documents/RNTodo/RNTodoApp/src/TodoApp/components/TodoList._test.js">
-        <metrics statements="5" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-      </file>
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
       <file name="TodoList.js" path="/Users/brendanrichards/Documents/RNTodo/RNTodoApp/src/TodoApp/components/TodoList.js">
-        <metrics statements="5" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
       </file>
     </package>
     <package name="RNTodoApp.src.TodoApp.containers">

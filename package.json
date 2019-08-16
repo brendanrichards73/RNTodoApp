@@ -28,16 +28,23 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jest": "24.8.0",
+    "jest-environment-enzyme": "^7.1.0",
+    "jest-enzyme": "^7.1.0",
     "jsdom": "15.1.1",
     "jsdom-global": "3.0.2",
     "metro-react-native-babel-preset": "0.55.0",
     "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.9.0",
     "react-test-renderer": "16.8.3"
   },
   "jest": {
     "preset": "react-native",
     "collectCoverage": true,
-    "testEnvironment": "jsdom",
+    "setupTestFrameworkScriptFile": "jest-enzyme",
+    "testEnvironment": "enzyme",
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    },
     "collectCoverageFrom": [
       "**/*.{js,jsx}",
       "!**/node_modules/**",
