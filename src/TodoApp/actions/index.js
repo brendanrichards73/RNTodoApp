@@ -1,10 +1,9 @@
 import { ADD_TODO, TOGGLE_TODO, DELETE_TODO } from './actionTypes';
-
-let nextId = 0
+import generateNextId from './generateNextId'
 
 export const addTodo = (text) => ({
     type: ADD_TODO,
-    id: nextId++,
+    id: generateNextId(),
     text
 })
 

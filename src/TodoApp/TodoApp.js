@@ -3,8 +3,6 @@ import { View, Text, StyleSheet } from 'react-native';
 import AddTodo from '../TodoApp/containers/AddTodo';
 import VisibleTodos from './containers/VisibleTodos';
 
-
-
 class TodoApp extends Component {
     render () {
         return (

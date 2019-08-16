@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextBox render default 1`] = `
+Array [
+  <TextInput
+    allowFontScaling={true}
+    placeholder="Type something"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#eaeaea",
+        "borderColor": "#f2f2e1",
+        "borderWidth": 1,
+        "flex": 1,
+        "height": 50,
+        "padding": 5,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="I need to cut the grass"
+  />,
+  <View
+    accessible={true}
+    isTVSelectable={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#eaeaea",
+          "height": 50,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": undefined,
+              "fontSize": 30,
+            },
+            Object {
+              "color": "#de9595",
+              "padding": 10,
+            },
+            Object {
+              "fontFamily": "anticon",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+  </View>,
+]
+`;

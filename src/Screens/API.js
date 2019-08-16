@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import { Text, View, ActivityIndicator, Picker, StyleSheet, Image } from 'react-native';
 
 
+const styles = StyleSheet.create({
+  dataContainer: {
+    marginTop: 10, 
+    borderColor: '#aeaeae',  
+    borderWidth: 5, 
+    width: 400, 
+    height: 300
+  },
+  text: {
+    fontSize: 20,
+    padding: 10,
+  }
+})
+
 export default class API extends React.Component {
   
   static navigationOptions  = {
@@ -72,7 +86,7 @@ render(){
         <Picker
             selectedValue={this.state.country}
             style={{height: 50, width: 300}}
-            onValueChange={(itemValue, itemIndex) => {
+            onValueChange={(itemValue) => {
               this.setState({country: itemValue});
               const associatedData = this.state.dataSource.filter(item => itemValue === item.name);
               this.setState({region: associatedData[0].region});
@@ -125,11 +139,6 @@ render(){
           Population:{'    '}{this.state.population}
         </Text>
       </View>
-      {/* <View>
-        <CardImg top width='100%' src={this.state.image}>
-           
-        </CardImg>
-      </View> */}
       </View>
       </View>
       
@@ -137,19 +146,3 @@ render(){
   );
 }
 }
-
-const styles = StyleSheet.create({
-  dataContainer: {
-    marginTop: 10, 
-    borderColor: '#aeaeae',  
-    borderWidth: 5, 
-    width: 400, 
-    height: 300
-  },
-  text: {
-    fontSize: 20,
-    padding: 10,
-    
-
-  }
-})

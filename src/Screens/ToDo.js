@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-native';
 import TodoApp from '../TodoApp/TodoApp';
-import store from '../TodoApp/store/index';
+import store from '../TodoApp/store';
 import { Provider } from 'react-redux';
 
 export default class ToDo extends Component {

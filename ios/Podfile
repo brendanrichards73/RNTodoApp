@@ -26,7 +26,7 @@ target 'todo' do
   pod 'Firebase/Messaging', '~> 6.3.0'
   pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
 
   post_install do |installer|
     rnfirebase = installer.pods_project.targets.find { |target| target.name == 'RNFirebase' }

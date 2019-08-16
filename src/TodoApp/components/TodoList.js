@@ -1,22 +1,22 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
+const TodoList = ({ todos, toggleTodo }) => {
+    const todosKeys = Object.keys(todos)
 
-
-
-const TodoList = ({ todos, toggleTodo, deleteTodo }) => (
-            <View style={{ padding: 20,}}>
-                {todos.map(todo => 
-                <TouchableOpacity key={todo.id} onPress={() => toggleTodo(todo.id)}>
-                    <Text style={{fontSize: 24,
-                    textDecorationLine:todo.completed ? 'line-through' : 'none'}}>{todo.text}</Text>
-                </TouchableOpacity>,
-                )}
+    return (<View testID = 'todo-item' style={{ padding: 20,}}>
+        {
+            todosKeys.map(todoKey => {
+                const todo = todos[todoKey]
                 
-            
-            </View>
-        )
+                return (<TouchableOpacity key={todo.id} onPress={() => toggleTodo(todo.id)}>
+                <Text testID = 'todo-title' style={{fontSize: 24,
+                textDecorationLine:todo.completed ? 'line-through' : 'none'}}>{todo.text}</Text>
+                </TouchableOpacity>)
+            }
+        
+        )}
+    </View>)
+}
 
 export default TodoList;
-
-// <Button style={{ width: 10, height: 10, backgroundColor: 'red' }} onPress={() => deleteTodo(id)}>Delete</Button>
