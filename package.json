@@ -30,7 +30,7 @@
     "jest": "24.8.0",
     "jest-environment-enzyme": "^7.1.0",
     "jest-enzyme": "^7.1.0",
-    "jsdom": "15.1.1",
+    "jsdom": "16.5.0",
     "jsdom-global": "3.0.2",
     "metro-react-native-babel-preset": "0.55.0",
     "react-addons-test-utils": "^15.6.2",
